@@ -1,10 +1,13 @@
+import dotenv from 'dotenv';
 import express, { Application, Request, Response } from "express";
 
 const app:Application = express();
-const port:number = 8080;
+
+const port = process.env.PORT
+dotenv.config()
 
 app.get("/", (req:Request, res:Response) => {
   res.send("HI THIS IS FROM THE SERVER");
 });
 
-app.listen(port, () => console.log("Connected successfully to port 8080"));
+app.listen(port, () => console.log(`Connected successfully to port ${port}`));
