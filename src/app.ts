@@ -10,4 +10,4 @@ app.get("/", (req:Request, res:Response) => {
   res.send("HI THIS IS FROM THE SERVER");
 });
 
-app.listen(port, () => console.log(`Connected successfully to port ${port}`));
+app.listen(port, () => console.log(`Connected successfully to port : ${port}`));
